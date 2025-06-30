@@ -607,6 +607,7 @@ progress {
 }
 
 .img-fluid {
+    border-radius: ;
     max-width: 100%;
     height: auto
 }
@@ -6475,7 +6476,7 @@ fieldset:disabled .btn {
 
 .carousel-item {
     color: white;
-    background-color: #cfcfcf;
+    /* background-color: #cfcfcf; */
     position: relative;
     display: none;
     float: left;
@@ -11565,3 +11566,102 @@ fieldset:disabled .btn {
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+
+
+/* Custom Styles for JVC Facts Section */
+.jvc-facts-section {
+    background-color: #1A1A1A; /* Deep charcoal grey, adjust if your existing background is different */
+    color: #FFFFFF;
+    padding: 80px 20px; /* Increased padding for better spacing */
+}
+
+.jvc-facts-container {
+    max-width: 1200px; /* Aligns with your current content max-width */
+    margin: 0 auto;
+}
+
+.jvc-facts-title {
+       font-size: 2.5em;
+    font-weight: 200 !important;
+    margin-bottom: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+
+}
+
+.jvc-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.jvc-card {
+    background: linear-gradient(145deg, #000000, #121212); /* Dark grey-blue gradient */
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jvc-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.jvc-card-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    margin-bottom: 20px;
+   border: 3px solid #000000;
+    box-shadow: 0 0 10px rgb(91 91 91);
+}
+
+.jvc-card-text {
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat as per previous design */
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+/* Responsive adjustments for JVC Facts Section */
+@media (max-width: 768px) {
+    .jvc-facts-title {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .jvc-cards-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+        padding: 0 15px; /* Add some horizontal padding */
+    }
+
+    .jvc-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .jvc-facts-title {
+        font-size: 1.7em;
+    }
+
+    .jvc-card-image {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+
+    .jvc-card-text {
+        font-size: 1em;
+    }
+}
