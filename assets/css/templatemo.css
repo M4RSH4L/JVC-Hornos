@@ -109,11 +109,11 @@ body, ul, li, p, a, label, input, div {
   margin-top: 20px;
 }
 /* Brand */
-.brand-img {
+/* .brand-img {
   filter: grayscale(100%);
   opacity: 0.5;
   transition: .5s;
-}
+} */
 .brand-img:hover {
   filter: grayscale(0%);
   opacity: 1;

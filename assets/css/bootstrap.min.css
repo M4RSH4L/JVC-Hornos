@@ -11665,3 +11665,88 @@ fieldset:disabled .btn {
         font-size: 1em;
     }
 }
+
+
+/* 
+Carousel despplazable */
+  .brands-section {
+    background-color: #ff2000;
+;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        .brands-carousel-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Oculta lo que desborda para mantener la vista en una fila */
+            padding: 20px 0;
+        }
+
+        /* Contenedor que realmente se animará y contendrá los sets duplicados */
+        .brands-carousel-track {
+            display: flex; /* Asegura que los sets se alineen en una fila */
+            width: max-content; /* Permite que el contenido se extienda más allá del viewport */
+            animation: scroll-left var(--animation-duration) linear infinite;
+        }
+
+        /* Cada set de marcas (original y duplicado) */
+        .brands-carousel-set {
+            display: flex; /* Alinea las marcas individuales en una fila */
+            flex-shrink: 0; /* Impide que este set se encoja */
+            /* Se podría calcular su ancho aquí si no se confía en max-content */
+            /* Por ejemplo: width: calc( (var(--item-width) + (var(--item-margin) * 2) ) * var(--num-items) ); */
+        }
+
+        .brand-item {
+            flex-shrink: 0; /* Impide que los ítems individuales se encojan */
+            margin: 0 30px; /* Espacio entre las marcas */
+            width: 150px; /* Ancho fijo para las imágenes */
+            height: 100px; /* Altura fija para las imágenes */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionar */
+            /* filter: brightness(0) invert(1); */ /* Descomentar si los logos son de color y quieres que se vean blancos */
+        }
+
+        /* Animación de desplazamiento */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                /* Se desplaza el 50% de su propio ancho (ya que tiene 2 sets) */
+                transform: translateX(-30%); 
+            }
+        }
+
+        /* Variables CSS para facilitar el ajuste y la responsividad */
+        :root {
+            --animation-duration: 40s; /* Duración de un ciclo completo */
+            --item-width: 150px;
+            --item-margin: 30px;
+            --num-items: 7; /* Número de marcas en tu set (no el total duplicado) */
+        }
+
+        /* Ajustes de animación para diferentes tamaños de pantalla */
+        @media (max-width: 768px) {
+            :root {
+                --animation-duration: 25s;
+                --item-width: 120px;
+                --item-margin: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root {
+                --animation-duration: 15s;
+                --item-width: 100px;
+                --item-margin: 10px;
+            }
+        }
