@@ -4765,6 +4765,7 @@ fieldset:disabled .btn {
 }
 
 .card-body {
+    background-color: #000;
     flex: 1 1 auto;
     padding: 1rem 1rem
 }
