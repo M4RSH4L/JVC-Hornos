@@ -311,6 +311,10 @@ svg {
     vertical-align: middle
 }
 
+.img-h1 {
+    width: 35%;
+}
+
 table {
     caption-side: bottom;
     border-collapse: collapse
@@ -607,11 +611,16 @@ progress {
 }
 
 .img-fluid {
-    border-radius: ;
-    max-width: 100%;
+    padding: 7%;
+    border-radius:9% ;
+        width: -webkit-fill-available;
+
     height: auto
 }
-
+img, svg {
+    /* width: 35%; */
+    vertical-align: middle;
+}
 .img-thumbnail {
     padding: .25rem;
     background-color: #fff;
@@ -11671,7 +11680,7 @@ fieldset:disabled .btn {
 /* 
 Carousel despplazable */
   .brands-section {
-    background-color: #ff2000;
+    background-color:#ffeb00;
 ;
             padding: 5px 0;
             text-align: center;
@@ -11681,7 +11690,7 @@ Carousel despplazable */
             position: relative;
             width: 100%;
             overflow: hidden; /* Oculta lo que desborda para mantener la vista en una fila */
-            padding: 20px 0;
+            /* padding: 10px 0; */
         }
 
         /* Contenedor que realmente se animará y contendrá los sets duplicados */
