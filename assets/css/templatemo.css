@@ -60,9 +60,9 @@ body, ul, li, p, a, label, input, div {
 .text-muted { color: #bcbcbc !important;}
 .text-success { color: #0d6efd !important;}
 .text-light { color: #cfd6e1 !important;}
-.bg-dark { background-color: #030d1a !important}
+.bg-dark { background-color: #01070f !important;}
 .bg-light { background-color: #030d1a !important;}
-.bg-black { background-color: #030d1a !important;}
+.bg-black { background-color: #01070f  !important;}
 .bg-success { background-color: #0d0d0d !important;}
 .btn-success {
   background-color: #0d6efd !important;
