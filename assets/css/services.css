@@ -1,7 +1,7 @@
  .hero-section {
             background-color: var(--bg-light-teal); /* Fondo similar al que proporcionaste */
             color: var(--text-light);
-            padding: 80px 0;
+            padding: 130px 0px 0px 0px;
             text-align: center;
             /* Si quieres una imagen de fondo en el hero, descomenta y ajusta: */
             /* background-image: url('URL_DE_TU_IMAGEN_DE_FONDO.jpg'); */
@@ -110,7 +110,7 @@
 
         @media (max-width: 767.98px) { /* Small devices (landscape phones) */
             .hero-section {
-                padding: 60px 0;
+                padding: 90px 0;
             }
             .hero-section h1 {
                 font-size: 2.2rem;
